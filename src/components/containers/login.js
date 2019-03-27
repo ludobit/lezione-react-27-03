@@ -4,16 +4,13 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
-import {ENDPOINT_API} from '../../constants';
-import Snackbar from '@material-ui/core/Snackbar';
+import {connect} from 'react-redux';
+import {LOGIN_ACTION} from '../../store/actions/user.actions';
 
-class Login extends Component {
+class LoginPage extends Component {
     state = {
         username: '',
-        password: '',
-        loading: false,
-        error: false,
-        errorMsg: ''
+        password: ''
     };
 
     handleChange = name => event => {
@@ -24,32 +21,18 @@ class Login extends Component {
         this.setState({error: false});
     };
 
-    submit = async () => {
-        this.setState({loading: true});
-        const res = await fetch(`${ENDPOINT_API}/api/login`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                username: this.state.username,
-                password: this.state.password
-            })
-        });
-        const responseBody = await res.json();
-        if (res.status !== 200) {
-            this.setState({loading: false, error: true, errorMsg: responseBody.message});
-        } else {
-            this.setState({loading: false});
-            localStorage.setItem('USER', JSON.stringify(responseBody));
-            this.props.history.push(`/dashboard`);
-        }
+    submit = async (ev) => {
+        ev.preventDefault();
+        const {dispatch} = this.props;
+        const {username, password} = this.state;
+        dispatch(LOGIN_ACTION(username, password));
     };
 
     render() {
-        const {loading, password, username, error, errorMsg} = this.state;
+        const {password, username} = this.state;
+        const {loading} = this.props;
         return (
-            <React.Fragment>
+            <form onSubmit={this.submit}>
                 <Grid container direction={'row'} justify={'center'}>
                     <Grid item xs={10}>
                         <Grid container direction={'column'} justify={'center'}
@@ -75,7 +58,7 @@ class Login extends Component {
                             <Grid item>
                                 <Grid container direction={'row'} justify={'center'}>
                                     <Button variant={'contained'} color={loading ? 'default' : 'primary'}
-                                            size={'large'} onClick={this.submit} disabled={!username || !password}>
+                                            size={'large'} disabled={!username || !password} type={'submit'}>
                                         {!loading && <span>login</span>}
                                         {loading && <CircularProgress size={24}/>}
                                     </Button>
@@ -84,18 +67,16 @@ class Login extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Snackbar
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'right',
-                    }}
-                    open={error}
-                    autoHideDuration={6000}
-                    onClose={this.handleClose}
-                    message={<span id="message-id">{errorMsg}</span>}/>
-            </React.Fragment>
+            </form>
         );
     }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+    const {loading} = state.authentication;
+    return {
+        loading
+    };
+};
+
+export default connect(mapStateToProps)(LoginPage);
