@@ -1,0 +1,175 @@
+POST http://corsoreact.azurewebsites.net/api/login?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T024213.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/login?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T022020.200.txt
+
+###
+
+GET http://corsoreact.azurewebsites.net/login?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100936.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/?id=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100922.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100912.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8&param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100856.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100846.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici&param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/id=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/param/dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100518.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
+POST http://corsoreact.azurewebsites.net/api/login
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T100200.200.json
+
+###
+
+POST http://corsoreact.azurewebsites.net/api/login
+Accept: */*
+Cache-Control: no-cache
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-27T095945.400.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/login
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-03-27T095748.200.txt
+
+###
+
