@@ -7,7 +7,7 @@ class User {
     _token;
 
     constructor(user) {
-        localStorage.setItem(LOCAL_USER, user);
+        localStorage.setItem(LOCAL_USER, JSON.stringify(user));
         const {uuid, username, password, token} = user;
         this._uuid = uuid;
         this._username = username;

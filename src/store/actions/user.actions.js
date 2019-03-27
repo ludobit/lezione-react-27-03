@@ -9,7 +9,7 @@ export const LOGIN_ACTION = (username, password) => {
         try {
             const user = await login(username, password);
             dispatch(success(user));
-            history.push('/');
+            history.push('/dashboard');
         } catch (e) {
             dispatch(failure(e));
             dispatch(errorAlert(e));

@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter, Router} from 'react-router-dom';
+import {Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './helpers/store.helper';
 import {history} from './helpers/history.helper';
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <Router history={history}>
-                <App/>
-            </Router>
-        </BrowserRouter>
+        <Router history={history}>
+            <App/>
+        </Router>
     </Provider>,
     document.getElementById('root'));
 

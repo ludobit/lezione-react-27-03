@@ -4,20 +4,36 @@ import routes from './routes';
 import './App.css';
 import {connect} from 'react-redux';
 import Snackbar from '@material-ui/core/Snackbar';
+import {history} from './helpers/history.helper';
+import {clearAlert} from './store/actions/alert.actions';
 
 class App extends Component {
     state = {
         error: false
     };
 
-    renderedRoutes = routes.map(
-        ({component, name, routePath}) => {
-            const DynamicComponent = component;
-            return <Route key={name} path={routePath}
-                          render={(props) => <DynamicComponent key={name} {...props}/>}/>;
+    constructor(props) {
+        super(props);
+        const {dispatch} = this.props;
+        history.listen(() => {
+            // clear alert on location change
+            dispatch(clearAlert());
+        });
+    }
 
-        }
-    );
+    renderedRoutes = () => {
+        const {user} = this.props;
+        return routes
+            .filter(({visibility}) => visibility === (user ? 'auth' : 'noAuth') || visibility === 'all')
+            .map(
+                ({component, name, routePath}) => {
+                    const DynamicComponent = component;
+                    return <Route key={name} path={routePath}
+                                  render={(props) => <DynamicComponent key={name} {...props}/>}/>;
+
+                }
+            );
+    };
 
     handleClose = () => {
         this.setState({error: false});
@@ -28,7 +44,7 @@ class App extends Component {
         return (
             <React.Fragment>
                 <Switch>
-                    {this.renderedRoutes}
+                    {this.renderedRoutes()}
                     <Redirect to="/"/>
                 </Switch>
                 <Snackbar
@@ -52,9 +68,10 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const {alert} = state;
+    const {alert, authentication: {user}} = state;
     return {
-        alert
+        alert,
+        user
     };
 };
 

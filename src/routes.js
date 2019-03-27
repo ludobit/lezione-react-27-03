@@ -9,7 +9,7 @@ export default [
         component: require('./components/containers/dashboard').default,
         routePath: '/dashboard',
         name: 'dashboard',
-        visibility: 'all'
+        visibility: 'auth'
     },
     {
         component: require('./components/containers/login').default,

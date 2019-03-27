@@ -6,6 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import {connect} from 'react-redux';
 import {LOGIN_ACTION} from '../../store/actions/user.actions';
+import {history} from '../../helpers/history.helper';
 
 class LoginPage extends Component {
     state = {
@@ -15,10 +16,6 @@ class LoginPage extends Component {
 
     handleChange = name => event => {
         this.setState({[name]: event.target.value});
-    };
-
-    handleClose = () => {
-        this.setState({error: false});
     };
 
     submit = async (ev) => {
@@ -70,12 +67,19 @@ class LoginPage extends Component {
             </form>
         );
     }
+
+    componentDidMount() {
+        if (this.props.user) {
+            history.push('/dashboard');
+        }
+    }
 }
 
 const mapStateToProps = (state) => {
-    const {loading} = state.authentication;
+    const {loading, user} = state.authentication;
     return {
-        loading
+        loading,
+        user
     };
 };
 
