@@ -12,6 +12,12 @@ export default [
         visibility: 'auth'
     },
     {
+        component: require('./components/containers/messages').default,
+        routePath: '/messages',
+        name: 'messages',
+        visibility: 'auth'
+    },
+    {
         component: require('./components/containers/login').default,
         routePath: '/',
         name: 'login',
