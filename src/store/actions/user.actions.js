@@ -29,7 +29,14 @@ export const LOGIN_ACTION = (username, password) => {
     }
 };
 
-export const LOGOUT_ACTION = async () => {
-    await logout();
-    return {type: LOGOUT};
+export const LOGOUT_ACTION = () => {
+    return async (dispatch) => {
+        await logout();
+        history.push('/');
+        dispatch(success());
+
+        function success() {
+            return {type: LOGOUT};
+        }
+    };
 };
