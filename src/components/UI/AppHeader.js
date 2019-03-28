@@ -19,14 +19,11 @@ class AppHeader extends Component {
     render() {
         return (
             <React.Fragment>
-                <AppBar style={{paddingLeft: '250px'}} position="static">
+                <AppBar position="static">
                     <Toolbar>
-                        <IconButton onClick={this.toggleDrawer} color="inherit" aria-label="Menu">
-                            <MenuIcon/>
-                        </IconButton>
                     </Toolbar>
                 </AppBar>
-                <AppDrawer open={this.state.isDrawerOpen} handleClose={this.toggleDrawer}/>
+                {/*<AppDrawer open={this.state.isDrawerOpen} handleClose={this.toggleDrawer}/>*/}
             </React.Fragment>
         );
     }
