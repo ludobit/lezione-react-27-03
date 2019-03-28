@@ -5,10 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import DescriptionIcon from '@material-ui/icons/Description';
-import EventIcon from '@material-ui/icons/Event';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import {Link as RouterLink} from 'react-router-dom';
@@ -24,21 +21,6 @@ const AppDrawer = (props) => {
             label: <Typography variant={'subtitle1'}>Dashboard</Typography>,
             icon: <DashboardIcon style={{opacity: '.5'}}/>,
             route: '/dashboard'
-        },
-        {
-            label: <Typography variant={'subtitle1'}>Visits</Typography>,
-            icon: <EventIcon style={{opacity: '.5'}}/>,
-            route: '/visits'
-        },
-        {
-            label: <Typography variant={'subtitle1'}>Questionars</Typography>,
-            icon: <DescriptionIcon style={{opacity: '.5'}}/>,
-            route: '/questionars'
-        },
-        {
-            label: <Typography variant={'subtitle1'}>Profile</Typography>,
-            icon: <AccountCircleIcon style={{opacity: '.5'}}/>,
-            route: '/profile'
         }
     ];
     const sideList = (
@@ -75,7 +57,7 @@ const AppDrawer = (props) => {
 
     return (
         <nav>
-            <Drawer open={open} onClose={handleClose} variant={'persistent'}>
+            <Drawer open={open} onClose={handleClose} variant={'permanent'}>
                 <div tabIndex={0}>
                     {sideList}
                 </div>
