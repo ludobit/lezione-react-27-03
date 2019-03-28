@@ -1,3 +1,35 @@
+GET http://corsoreact.azurewebsites.net/api/amici/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJlOGM0ZWUzNi02NTA1LTQ0NmMtYWVjMC02MDE5ODkyNDY3Y2EiLCJuYmYiOjE1NTM3NzgwNTEsImV4cCI6MTU1NDM4Mjg1MSwiaWF0IjoxNTUzNzc4MDUxfQ.U937BF0-oR8-2a-RD_Fm21Zw_3O5g86atIlAf1Hplhw
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+<> 2019-03-28T020125.200.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
+GET http://corsoreact.azurewebsites.net/api/amici
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJmMGZiODJkMC04MmQzLTQwMmItYmY4Yi02NDhhNzc0OWE0MWYiLCJuYmYiOjE1NTM2NzczMTgsImV4cCI6MTU1NDI4MjExOCwiaWF0IjoxNTUzNjc3MzE4fQ.m29U7YIfSnZcpjOR-fF-HC1N4VYomIOU5ljVb0VPZMo
+
+< C:/Users/ludov/WebstormProjects/personali/lezione-27-03/api/login.api.json
+
+###
+
 POST http://corsoreact.azurewebsites.net/api/login?param=dfffaef0-dc8b-4cd7-9e07-63b4c36b6be8
 Accept: */*
 Cache-Control: no-cache

@@ -1,5 +1,13 @@
-import {LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT} from '../../constants/user.constants';
-import {login, logout} from '../../services/user.service';
+import {
+    GET_USERS_FAILURE,
+    GET_USERS_REQUEST,
+    GET_USERS_SUCCESS,
+    LOGIN_FAILURE,
+    LOGIN_REQUEST,
+    LOGIN_SUCCESS,
+    LOGOUT
+} from '../../constants/user.constants';
+import {getAllUsers, login, logout} from '../../services/user.service';
 import {history} from '../../helpers/history.helper';
 import {errorAlert} from './alert.actions';
 
@@ -39,4 +47,29 @@ export const LOGOUT_ACTION = () => {
             return {type: LOGOUT};
         }
     };
+};
+
+export const GET_USERS_ACTION = () => {
+    return async (dispatch) => {
+        dispatch(request());
+        try {
+            const users = await getAllUsers();
+            dispatch(success(users));
+        } catch (e) {
+            dispatch(failure(e));
+            dispatch(errorAlert(e));
+        }
+    };
+
+    function request() {
+        return {type: GET_USERS_REQUEST};
+    }
+
+    function success(users) {
+        return {type: GET_USERS_SUCCESS, users};
+    }
+
+    function failure(error) {
+        return {type: GET_USERS_FAILURE, error};
+    }
 };

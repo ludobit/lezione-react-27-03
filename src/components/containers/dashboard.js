@@ -8,21 +8,13 @@ import MailIcon from '@material-ui/icons/Mail';
 import Typography from '@material-ui/core/Typography';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Divider from '@material-ui/core/Divider';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import {connect} from 'react-redux';
+import {GET_USERS_ACTION} from '../../store/actions/user.actions';
 
-class Dashboard extends Component {
-    state = {
-        users: [
-            {
-                email: 'pippo@pippi.com'
-            },
-            {
-                email: 'topolino@pippi.com'
-            }
-        ]
-    };
-
+class DashboardPage extends Component {
     render() {
-        const {users} = this.state;
+        const {users = [], loading} = this.props;
         return (
             <DefaultLayout>
                 <Grid container direction={'row'} justify={'center'}>
@@ -30,25 +22,46 @@ class Dashboard extends Component {
                         <Typography variant={'title'}>Utenti</Typography>
                     </Grid>
                     <Grid xs={10} item>
+                        {loading &&
+                        <Grid container justify={'center'} style={{marginTop: '35px'}}>
+                            <CircularProgress size={24}/>
+                        </Grid>}
+                        {!loading &&
                         <List>
+                            {!users.length &&
+                            <ListItem>
+                                <ListItemText primary={'Nessun utente'}/>
+                            </ListItem>}
                             {users.map(
-                                ({email}, index) =>
+                                ({username}, index) =>
                                     <React.Fragment key={index}>
                                         <ListItem>
                                             <ListItemIcon>
                                                 <MailIcon/>
                                             </ListItemIcon>
-                                            <ListItemText primary={email}/>
+                                            <ListItemText primary={username}/>
                                         </ListItem>
                                         {users.length - 1 !== index && <Divider/>}
                                     </React.Fragment>
                             )}
-                        </List>
+                        </List>}
                     </Grid>
                 </Grid>
             </DefaultLayout>
         );
     }
+
+    componentDidMount() {
+        this.props.dispatch(GET_USERS_ACTION());
+    }
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+    const {loading, users} = state.users;
+    return {
+        loading,
+        users
+    };
+};
+
+export default connect(mapStateToProps)(DashboardPage);
