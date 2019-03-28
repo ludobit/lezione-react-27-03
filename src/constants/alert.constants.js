@@ -1,3 +1,3 @@
 export const ALERT_SUCCESS = 'ALERT_SUCCESS';
 export const ALERT_ERROR = 'ALERT_ERROR';
-export const CLEAR = 'CLEAR_ALERT';
+export const ALERT_CLEAR = 'CLEAR_ALERT';

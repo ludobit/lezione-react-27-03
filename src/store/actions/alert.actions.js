@@ -1,4 +1,4 @@
-import {ALERT_SUCCESS, ALERT_ERROR, CLEAR} from '../../constants/alert.constants';
+import {ALERT_SUCCESS, ALERT_ERROR, ALERT_CLEAR} from '../../constants/alert.constants';
 
 export const successAlert = ({message}) => {
     return {type: ALERT_SUCCESS, message};
@@ -9,5 +9,5 @@ export const errorAlert = ({message}) => {
 };
 
 export const clearAlert = () => {
-    return {type: CLEAR};
+    return {type: ALERT_CLEAR};
 };

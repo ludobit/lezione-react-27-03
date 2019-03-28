@@ -1,4 +1,4 @@
-import {ALERT_SUCCESS, ALERT_ERROR} from '../../constants/alert.constants';
+import {ALERT_SUCCESS, ALERT_ERROR, ALERT_CLEAR} from '../../constants/alert.constants';
 
 export const alert = (state = {}, action) => {
     switch (action.type) {
@@ -12,6 +12,8 @@ export const alert = (state = {}, action) => {
                 type: 'alert-danger',
                 message: action.message
             };
+        case ALERT_CLEAR:
+            return {};
         default:
             return state;
     }

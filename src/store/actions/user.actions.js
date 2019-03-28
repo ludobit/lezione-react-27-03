@@ -5,7 +5,7 @@ import {errorAlert} from './alert.actions';
 
 export const LOGIN_ACTION = (username, password) => {
     return async (dispatch) => {
-        dispatch(request({username}));
+        dispatch(request({}));
         try {
             const user = await login(username, password);
             dispatch(success(user));
@@ -16,8 +16,8 @@ export const LOGIN_ACTION = (username, password) => {
         }
     };
 
-    function request(user) {
-        return {type: LOGIN_REQUEST, user};
+    function request() {
+        return {type: LOGIN_REQUEST};
     }
 
     function success(user) {

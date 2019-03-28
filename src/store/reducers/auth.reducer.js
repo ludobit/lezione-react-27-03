@@ -14,7 +14,7 @@ export const authentication = (state = defaultState, action) => {
             };
         case LOGIN_SUCCESS:
             return {
-                loading: true,
+                loading: false,
                 user: action.user
             };
         case LOGIN_FAILURE:

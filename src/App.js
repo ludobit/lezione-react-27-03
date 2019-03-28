@@ -9,7 +9,7 @@ import {clearAlert} from './store/actions/alert.actions';
 
 class App extends Component {
     state = {
-        error: false
+        snackbar: false
     };
 
     constructor(props) {
@@ -36,7 +36,7 @@ class App extends Component {
     };
 
     handleClose = () => {
-        this.setState({error: false});
+        this.setState({snackbar: false});
     };
 
     render() {
@@ -52,7 +52,7 @@ class App extends Component {
                         vertical: 'bottom',
                         horizontal: 'right',
                     }}
-                    open={this.state.error}
+                    open={this.state.snackbar}
                     autoHideDuration={6000}
                     onClose={this.handleClose}
                     message={<span id="message-id">{alert.message}</span>}/>
@@ -61,8 +61,8 @@ class App extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.alert.message && prevState.error === false) {
-            this.setState({error: true});
+        if (this.props.alert.message && prevState.snackbar === false) {
+            this.setState({snackbar: true});
         }
     }
 }
