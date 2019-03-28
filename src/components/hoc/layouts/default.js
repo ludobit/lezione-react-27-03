@@ -6,7 +6,7 @@ const DefaultLayout = (props) => {
     return (
         <main id="default-layout">
             <AppHeader/>
-            <section>
+            <section style={{marginTop: '35px'}}>
                 {children}
             </section>
         </main>
